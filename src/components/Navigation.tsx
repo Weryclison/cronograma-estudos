@@ -28,14 +28,14 @@ export const Navigation = () => {
           </h1>
         </div>
         
-        <ul className="flex gap-2 overflow-x-auto">
+        <ul className="grid grid-cols-2 sm:flex gap-2">
           {navItems.map(({ path, icon: Icon, label }) => {
             const isActive = location.pathname === path;
             return (
               <li key={path}>
                 <Link
                   to={path}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                  className={`flex items-center justify-center sm:justify-start gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
                     isActive
                       ? 'bg-primary text-primary-foreground'
                       : 'text-muted-foreground hover:text-card-foreground hover:bg-muted'
