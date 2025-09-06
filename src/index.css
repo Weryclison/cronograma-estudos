@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Study Organizer Design System - Pastels & Clean */
+
+@layer base {
+  :root {
+    /* Soft pastel background */
+    --background: 315 30% 98%;
+    --foreground: 260 15% 20%;
+
+    /* Card system with subtle borders */
+    --card: 315 25% 97%;
+    --card-foreground: 260 15% 25%;
+    --card-border: 315 20% 90%;
+
+    /* Popover */
+    --popover: 315 25% 97%;
+    --popover-foreground: 260 15% 25%;
+
+    /* Primary - Soft lavender */
+    --primary: 280 40% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 280 45% 70%;
+
+    /* Secondary - Light peach */
+    --secondary: 15 60% 90%;
+    --secondary-foreground: 260 15% 30%;
+    --secondary-hover: 15 65% 85%;
+
+    /* Accent - Soft pink */
+    --accent: 330 50% 88%;
+    --accent-foreground: 260 15% 30%;
+    --accent-hover: 330 55% 83%;
+
+    /* Muted - Beige tones */
+    --muted: 30 20% 94%;
+    --muted-foreground: 260 10% 45%;
+
+    /* Success - Soft mint */
+    --success: 140 30% 80%;
+    --success-foreground: 140 50% 25%;
+
+    /* Warning - Soft peach */
+    --warning: 35 70% 85%;
+    --warning-foreground: 35 60% 30%;
+
+    /* Destructive - Soft coral */
+    --destructive: 0 50% 80%;
+    --destructive-foreground: 0 70% 30%;
+
+    /* Input & borders */
+    --border: 315 20% 88%;
+    --input: 315 20% 92%;
+    --ring: 280 40% 75%;
+
+    /* Status colors */
+    --status-completed: 140 30% 80%;
+    --status-pending: 50 60% 85%;
+    --status-not-done: 0 50% 85%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 40% 85%), hsl(315 45% 88%));
+    --gradient-secondary: linear-gradient(135deg, hsl(15 60% 92%), hsl(30 50% 90%));
+    --gradient-accent: linear-gradient(135deg, hsl(330 50% 90%), hsl(280 40% 88%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(280 30% 70% / 0.1);
+    --shadow-card: 0 4px 12px -4px hsl(280 30% 70% / 0.15);
+    --shadow-elevated: 0 8px 24px -8px hsl(280 30% 70% / 0.2);
+
+    --radius: 12px;
+    
+    --sidebar-background: 315 25% 97%;
+    --sidebar-foreground: 260 15% 25%;
+    --sidebar-primary: 280 40% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 315 25% 94%;
+    --sidebar-accent-foreground: 260 15% 30%;
+    --sidebar-border: 315 20% 90%;
+    --sidebar-ring: 280 40% 75%;
+  }
+
+  .dark {
+    --background: 260 15% 8%;
+    --foreground: 315 25% 95%;
+
+    --card: 260 15% 10%;
+    --card-foreground: 315 25% 90%;
+    --card-border: 260 15% 18%;
+
+    --popover: 260 15% 10%;
+    --popover-foreground: 315 25% 90%;
+
+    --primary: 280 40% 70%;
+    --primary-foreground: 260 15% 8%;
+    --primary-hover: 280 45% 65%;
+
+    --secondary: 260 15% 15%;
+    --secondary-foreground: 315 25% 85%;
+    --secondary-hover: 260 15% 20%;
+
+    --accent: 260 15% 15%;
+    --accent-foreground: 315 25% 85%;
+    --accent-hover: 260 15% 20%;
+
+    --muted: 260 15% 12%;
+    --muted-foreground: 315 15% 55%;
+
+    --success: 140 30% 60%;
+    --success-foreground: 140 50% 95%;
+
+    --warning: 35 70% 65%;
+    --warning-foreground: 35 60% 95%;
+
+    --destructive: 0 50% 65%;
+    --destructive-foreground: 0 70% 95%;
+
+    --border: 260 15% 18%;
+    --input: 260 15% 15%;
+    --ring: 280 40% 70%;
+
+    --status-completed: 140 30% 60%;
+    --status-pending: 50 60% 65%;
+    --status-not-done: 0 50% 65%;
+
+    --sidebar-background: 260 15% 8%;
+    --sidebar-foreground: 315 25% 85%;
+    --sidebar-primary: 280 40% 70%;
+    --sidebar-primary-foreground: 260 15% 8%;
+    --sidebar-accent: 260 15% 12%;
+    --sidebar-accent-foreground: 315 25% 85%;
+    --sidebar-border: 260 15% 18%;
+    --sidebar-ring: 280 40% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .card-subtle {
+    @apply bg-card border border-card-border rounded-xl shadow-[var(--shadow-card)];
+  }
+  
+  .status-completed {
+    @apply bg-[hsl(var(--status-completed))] text-[hsl(var(--status-completed)_/_0.8)] border-[hsl(var(--status-completed)_/_0.6)];
+  }
+  
+  .status-pending {
+    @apply bg-[hsl(var(--status-pending))] text-[hsl(var(--status-pending)_/_0.8)] border-[hsl(var(--status-pending)_/_0.6)];
+  }
+  
+  .status-not-done {
+    @apply bg-[hsl(var(--status-not-done))] text-[hsl(var(--status-not-done)_/_0.8)] border-[hsl(var(--status-not-done)_/_0.6)];
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+}
