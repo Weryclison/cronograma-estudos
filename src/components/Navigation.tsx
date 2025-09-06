@@ -23,7 +23,7 @@ export const Navigation = () => {
       <nav className="p-4">
         <div className="flex items-center gap-2 mb-6">
           <BookOpen className="h-6 w-6 text-primary" />
-          <h1 className="text-xl font-bold gradient-primary bg-clip-text text-transparent">
+          <h1 className="text-base sm:text-xl font-bold gradient-primary bg-clip-text text-transparent">
             Cronograma de Estudos
           </h1>
         </div>

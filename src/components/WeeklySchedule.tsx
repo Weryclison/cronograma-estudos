@@ -99,7 +99,7 @@ export const WeeklySchedule = ({
           <CardTitle className="text-xl font-semibold text-card-foreground">
             Cronograma Semanal
           </CardTitle>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <Button
               variant="outline"
               size="sm"
@@ -108,7 +108,7 @@ export const WeeklySchedule = ({
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            <span className="text-sm font-medium text-muted-foreground min-w-[120px] text-center">
+            <span className="text-sm font-medium text-muted-foreground min-w-[90px] text-center">
               {weekTitle}
             </span>
             <Button
@@ -152,7 +152,7 @@ export const WeeklySchedule = ({
                 </Button>
               </div>
 
-              <div className="space-y-2 min-h-[40px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 min-h-[40px]">
                 {daySessions.length === 0 ? (
                   <p className="text-sm text-muted-foreground italic py-2">
                     Nenhuma sessão agendada

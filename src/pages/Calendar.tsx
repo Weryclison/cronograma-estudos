@@ -71,9 +71,9 @@ const Calendar = () => {
   };
 
   const days = getDaysInMonth(currentDate);
-  const monthName = currentDate.toLocaleDateString('pt-BR', { 
-    month: 'long', 
-    year: 'numeric' 
+  const monthName = currentDate.toLocaleDateString('pt-BR', {
+    month: '2-digit',
+    year: '2-digit'
   });
 
   const isToday = (date: Date | null) => {
@@ -95,7 +95,7 @@ const Calendar = () => {
                   <CalendarIcon className="h-5 w-5 text-primary" />
                   Calendário de Estudos
                 </CardTitle>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   <Button
                     variant="outline"
                     onClick={() => navigateMonth('prev')}
@@ -103,7 +103,7 @@ const Calendar = () => {
                   >
                     <ChevronLeft className="h-4 w-4" />
                   </Button>
-                  <div className="text-lg font-medium text-card-foreground min-w-[200px] text-center capitalize">
+                  <div className="text-lg font-medium text-card-foreground min-w-[80px] text-center capitalize">
                     {monthName}
                   </div>
                   <Button
@@ -177,7 +177,7 @@ const Calendar = () => {
               </div>
               
               {/* Legend */}
-              <div className="mt-6 flex items-center justify-center gap-6 text-sm">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded bg-success"></div>
                   <span className="text-muted-foreground">Concluído</span>

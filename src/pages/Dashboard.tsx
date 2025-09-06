@@ -71,9 +71,9 @@ const Dashboard = () => {
         <Navigation />
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Weekly Schedule - Takes 2 columns on large screens */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-2">
             <WeeklySchedule
               sessions={weekSessions}
               onAddSession={handleAddSession}
@@ -90,7 +90,7 @@ const Dashboard = () => {
           </div>
 
           {/* Study Sessions List - Full width */}
-          <div className="lg:col-span-3">
+          <div>
             <StudySessionList
               sessions={recentSessions}
               onEdit={handleEditSession}

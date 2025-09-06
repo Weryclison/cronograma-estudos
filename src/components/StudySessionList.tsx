@@ -157,7 +157,7 @@ export const StudySessionList = ({
                               </p>
                             )}
                           </div>
-                          <div className="flex items-center gap-1 ml-3">
+                          <div className="flex items-center gap-1 ml-3 flex-wrap">
                             <Button
                               variant="ghost"
                               size="sm"
@@ -178,7 +178,7 @@ export const StudySessionList = ({
                         </div>
 
                         {session.status !== "completed" && (
-                          <div className="flex gap-2">
+                          <div className="flex gap-2 flex-wrap">
                             <Button
                               variant="outline"
                               size="sm"
